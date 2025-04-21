@@ -28,6 +28,7 @@
 header {
   background-image: linear-gradient(to bottom, var(--cor4), var(--cor2));
   min-height: 150px;
+  width: 100%;
 }
 
 header h1 {
@@ -143,6 +144,7 @@ footer {
   padding: 10px;
   font-family: var(--fonttexto);
   font-size: 1em;
+  width: 100%;
 
 }
 
