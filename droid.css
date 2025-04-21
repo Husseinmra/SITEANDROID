@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+  font-family: "droid";
+  src: url("./fontes/idroid.otf" ) format("opentype");
+  font-weight: normal;      
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --cor1: #30FA6C;
+  --cor2: #0d2113;
+  --cor3: #a0bfaf;
+  --cor4: #467957;
+
+  --fontedestaque: 'Bebas Neue', cursive;
+  --fontdroid: "droid", sans-serif;
+  --fonttexto: "Arial", helvetica, sans-serif;
+}
+
+
+header {
+  background-image: linear-gradient(to bottom, var(--cor4), var(--cor2));
+  min-height: 150px;
+}
+
+header h1 {
+  font-family: var(--fontedestaque);
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.29);
+  color: white;
+  padding: 30px;
+}
+
+header p {
+  font-family: var(--fonttexto);
+  font-size: 1.5em;
+  text-align: center;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.29);
+  max-width: 600px;
+  margin: 0 auto;
+  color: white;
+  padding-bottom: 30px;
+}
+
+nav {
+  padding: 10px;
+  display: flex;
+  background-color: var(--cor2);
+}
+nav a {
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--cor3);
+  font-family: var(--fonttexto);
+}
+
+nav a:hover {
+  background-color: var(--cor1);
+  color: white;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+
+body{
+  background-color: var(--cor3);
+}
+
+main {
+
+  font-family: var(--fonttexto);
+  font-size: 1.2em;
+  
+  background-color: white;
+  padding: 20px;
+  border-radius: 0px 0px 5px 5px;
+  min-width: 300px;
+  max-width: 700px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.29);
+  margin: auto;
+  
+
+}
+
+main h1{
+  font-family: var(--fontdroid);
+  font-size: 1.5em;
+  color: var(--cor2);
+  margin-top: 30px;
+  margin-bottom: 20px;
+  
+}
+
+main h2{
+  font-family: var(--fontdroid);
+  font-size: 1em;
+  text-indent: 10px;
+  color: var(--cor2);
+  background-image: linear-gradient(to right, var(--cor4), transparent);
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+main p {
+  text-indent: 40px;
+  margin-bottom: 20px;
+  text-align: justify;
+  line-height: 1.5em;
+  font-family: var(--fonttexto);
+  font-size: 1em;
+}
+
+main a {
+  text-decoration: none;
+  font-family: var(--fonttexto);
+  font-size: 1em;
+  padding: 5px;
+  background-color: var(--cor4);
+  border-radius: 5px;
+  color: black;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.29);
+}
+
+main a:hover {
+  color: white;
+  transition-duration: 0.5s;
+  text-decoration: underline;
+  
+}
+
+main a::after {
+  content: " 🔗";
+}
+footer {
+  background-color: var(--cor2);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-family: var(--fonttexto);
+  font-size: 1em;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 20px 0px;
+}
+
+div.bugdroid {
+  margin: auto;
+  max-width: fit-content;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+aside {
+  background-color: var(--cor3);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.29);
+  
+}
+aside h3 {
+  font-family: var(--fonttexto);
+  font-size: 1.2em;
+  color: var(--cor2);
+  background-color: #467957;
+  text-indent: 1em;
+  color: white;
+  border-radius: 5px 5px 0px 0px;
+}
+
+aside p {
+  font-family: var(--fonttexto);
+  font-size: 1em;
+  text-indent: 10px;
+  margin: 5px 20px 10px 20px;
+  text-align: justify;
+  line-height: 1.5em;
+  padding-bottom: 10px;
+}
+aside ul {
+  font-family: var(--fontedestaque);
+  font-size: 1.1em;
+  text-indent: 10px;
+  margin-bottom: 30px;
+  text-align: justify;
+  line-height: 1.5em;
+  columns: 2;  
+  list-style: inside;
+  
+}
+aside ul li {
+  background-color: var(--cor2);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.29);
+  margin: 5px;
+  list-style-type: none;
+}
+
+aside ul li::before {
+  content: "🗸\00A0";
+  
+}
+
+.video
+{
+  background-color: var(--cor4);
+  position: relative;
+  padding: 20px;
+  margin: 20px -20px 20px -20px;
+  padding-bottom: 56.25%; /* proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video > iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  height: 90%;
+  width: 90%;
+}
